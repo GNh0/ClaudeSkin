@@ -1,0 +1,12 @@
+{
+  "name": "claudeskin-dev",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "demo:prepare": "node scripts/prepare-demo.mjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.13"
+  }
+}

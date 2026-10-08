@@ -1,0 +1,23 @@
+name: Preview checks
+on: [push, pull_request]
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: dotnet build -c Release
+      - name: Windows media and adapter checks
+        shell: pwsh
+        run: |
+          $process = Start-Process -FilePath './bin/Release/net9.0-windows/ClaudeSkin.exe' -ArgumentList '--self-test' -Wait -PassThru -WindowStyle Hidden
+          Get-Content './bin/Release/net9.0-windows/self-test-result.txt'
+          if ($process.ExitCode -ne 0) { exit $process.ExitCode }

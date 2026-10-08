@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b1421"><title>ClaudeSkin · 움직이는 테마 미리보기</title>
+<link rel="stylesheet" href="demo.css"><script src="skin-engine.js" defer></script><script src="demo.js" defer></script></head>
+<body><div class="shell">
+<aside><a class="brand" href="../#work"><span>CS</span> ClaudeSkin</a><p class="eyebrow">GNHO LABS / PREVIEW 0.1.0</p><h1>하나의 테마.<br>두 가지 화면.</h1><p class="muted">명조와 붕괴 테마를 웹과 Desktop에 연결하는 Windows 관리 도구.</p>
+<div class="platforms" role="group" aria-label="미리보기 화면"><button id="web" class="selected" aria-pressed="true">Web</button><button id="desktop" aria-pressed="false">Desktop</button></div>
+<label class="label" for="theme">테마 라이브러리</label><select id="theme"><option value="shorekeeper">Shorekeeper · 명조 / GIF</option><option value="firefly">Firefly · 스타레일 / MP4</option><option value="jinhsi">Jinhsi · 명조 / MP4</option></select>
+<label class="label" for="dim">배경 어둡게 <output id="dim-value">45%</output></label><input id="dim" type="range" min="10" max="85" value="45">
+<label class="check"><input id="motion" type="checkbox" checked> 움직이는 배경</label><label class="check"><input id="enabled" type="checkbox" checked> 테마 표시</label>
+<p class="muted small">시스템의 동작 감소 설정을 켜면 정지 이미지가 표시됩니다.</p><a class="download" href="https://github.com/GNh0/ClaudeSkin/releases" target="_blank" rel="noopener">Windows 미리보기 다운로드 ↗</a><a class="source" href="https://github.com/GNh0/ClaudeSkin" target="_blank" rel="noopener">소스와 사용 방법 ↗</a>
+<div class="notice"><strong>호환성 미리보기</strong><p>이 페이지는 실제 스킨 엔진을 샘플 대화 UI에 적용합니다. 공식 Claude 화면 캡처가 아닙니다. 웹·Desktop의 실제 화면 검증은 진행 중입니다.</p></div></aside>
+<main><header class="top"><div><span class="dot"></span><span id="surface">Web companion</span></div><span class="badge">LIVE THEME ENGINE</span></header>
+<section class="conversation" aria-labelledby="title"><div class="title"><p class="eyebrow">YOUR WORKSPACE, YOUR ATMOSPHERE</p><h2 id="title">코드에 집중하는 공간,<br>취향을 담은 배경.</h2><p id="theme-name">Shorekeeper</p></div>
+<div class="messages"><p class="user-message">이 C# 화면과 SQL 프로시저를 함께 검토해 줘.</p><article class="assistant-message"><span class="spark">✳</span><div><h3>검토할 내용을 정리했어요.</h3><p>변경하려는 동작과 원본 코드의 연결을 먼저 확인합니다.</p><div class="steps"><span>01 &nbsp; 데이터 흐름 확인</span><span>02 &nbsp; 검토 가능한 변경안</span><span>03 &nbsp; 필요한 검사 실행</span></div><p class="sample">샘플 대화 · 모델에 전송되거나 실행되지 않습니다.</p></div></article></div>
+<div class="claudeskin-composer"><textarea aria-label="샘플 입력창" placeholder="이 공간에서 텍스트 가독성을 확인해 보세요. 전송 기능은 없습니다."></textarea><footer><span>Sample workspace</span><button id="restore" type="button">테마 복원</button></footer></div>
+<p class="footnote">비공식 캐릭터 테마 · 원본 권리는 해당 권리자에게 있습니다.</p></section></main></div></body></html>

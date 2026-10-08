@@ -1,0 +1,11 @@
+#claudeskin-background { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; isolation:isolate; }
+#claudeskin-background > img, #claudeskin-background > video { width:100%; height:100%; object-fit:cover; object-position:center; }
+#claudeskin-background .claudeskin-veil { position:absolute; inset:0; background:#030711; }
+html[data-claudeskin], html[data-claudeskin] body { background:transparent !important; }
+html[data-claudeskin] body { position:relative; z-index:1; color:#e8eef6; }
+html[data-claudeskin] :is(body > #root, body > #__next, main, main > div, [data-testid="conversation"], .bg-bg-000, .bg-bg-100, .bg-bg-200) { background:transparent !important; }
+html[data-claudeskin] :is(aside, nav[aria-label], [data-testid="sidebar"], [role="dialog"], [role="menu"], [data-testid="chat-input-grid-container"], fieldset, .claudeskin-composer) { background:rgba(12,18,28,.91) !important; color:#e8eef6; border-color:rgba(194,220,237,.2); }
+html[data-claudeskin] :is(pre, code) { background:rgba(5,11,19,.85); }
+html[data-claudeskin] :is(textarea, [contenteditable="true"]) { color:inherit; }
+html[data-claudeskin] :is(a, button):focus-visible { outline:2px solid #79e8df; outline-offset:3px; }
+@media (prefers-reduced-motion:reduce) { #claudeskin-background * { animation:none !important; } }
